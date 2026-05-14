@@ -62,7 +62,7 @@ const VisualizerCanvas = ({ selectedCategory, selectedAlgorithm }) => {
           <LayoutDashboard size={16} />
           Visualization
         </div>
-        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
            <input 
              type="text" 
              value={inputData} 
@@ -167,7 +167,7 @@ const VisualizerCanvas = ({ selectedCategory, selectedAlgorithm }) => {
 
         {/* Variables Display */}
         {currentData.variables && (
-          <div style={{ marginTop: '20px', display: 'flex', gap: '20px' }}>
+          <div style={{ marginTop: '20px', display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
             {Object.entries(currentData.variables).map(([key, val]) => (
               <div key={key} style={{ background: 'var(--bg-main)', padding: '8px 12px', borderRadius: '4px', border: '1px solid var(--border-color)', fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>
                 <span style={{ color: 'var(--text-muted)' }}>{key}:</span> <span style={{ color: 'var(--accent-primary)' }}>{val}</span>
