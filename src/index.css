@@ -280,10 +280,12 @@ h1, h2, h3 {
 
 .array-container {
   display: flex;
-  gap: 8px;
+  gap: 12px;
+  row-gap: 48px; /* Increased to prevent overlap between indices (below) and pointers (above) */
   align-items: flex-end;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 20px 0; /* Extra padding for top/bottom pointers/indices */
 }
 
 .array-element {
