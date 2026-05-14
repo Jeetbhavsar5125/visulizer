@@ -38,6 +38,15 @@ const CodeEditor = ({ code, setCode, language, setLanguage, theme }) => {
             scrollBeyondLastLine: false,
             smoothScrolling: true,
             cursorBlinking: "smooth",
+            automaticLayout: true,
+            wordWrap: "on",
+            scrollbar: {
+              vertical: 'visible',
+              horizontal: 'visible',
+              useShadows: false,
+              verticalScrollbarSize: 10,
+              horizontalScrollbarSize: 10
+            }
           }}
         />
       </div>

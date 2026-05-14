@@ -168,10 +168,11 @@ h1, h2, h3 {
   .editor-panel {
     min-width: 100%;
     order: 2;
-    height: 500px;
+    height: 400px;
+    flex: none; /* Prevent flex growth issues */
   }
   .visualizer-panel {
-    min-height: 500px;
+    min-height: 450px;
     order: 1;
   }
 }
