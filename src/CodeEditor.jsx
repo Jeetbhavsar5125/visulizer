@@ -23,12 +23,13 @@ const CodeEditor = ({ code, setCode, language, setLanguage, theme }) => {
           </select>
         </div>
       </div>
-      <div style={{ flex: 1, backgroundColor: 'var(--bg-main)', padding: '8px 0' }}>
+      <div style={{ height: 'calc(100% - 45px)', backgroundColor: 'var(--bg-main)', padding: '8px 0' }}>
         <Editor
           height="100%"
           language={language}
-          theme={theme === 'dark' ? 'vs-dark' : 'light'}
+          theme={theme === 'dark' ? 'vs-dark' : 'vs'}
           value={code}
+          loading={<div style={{ color: 'var(--text-muted)', padding: '20px', textAlign: 'center' }}>Loading Source Code...</div>}
           onChange={(value) => setCode(value)}
           options={{
             minimap: { enabled: false },
@@ -46,7 +47,7 @@ const CodeEditor = ({ code, setCode, language, setLanguage, theme }) => {
               useShadows: false,
             },
             contextmenu: false,
-            readOnly: true, // Setting to true by default for mobile viewing, can be changed
+            readOnly: false,
           }}
         />
       </div>
