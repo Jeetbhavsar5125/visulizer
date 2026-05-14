@@ -32,21 +32,21 @@ const CodeEditor = ({ code, setCode, language, setLanguage, theme }) => {
           onChange={(value) => setCode(value)}
           options={{
             minimap: { enabled: false },
-            fontSize: 14,
-            fontFamily: "'Fira Code', monospace",
+            fontSize: 13,
+            fontFamily: "'JetBrains Mono', monospace",
             padding: { top: 16 },
             scrollBeyondLastLine: false,
             smoothScrolling: true,
-            cursorBlinking: "smooth",
             automaticLayout: true,
-            wordWrap: "on",
             scrollbar: {
               vertical: 'visible',
               horizontal: 'visible',
+              verticalScrollbarSize: 8,
+              horizontalScrollbarSize: 8,
               useShadows: false,
-              verticalScrollbarSize: 10,
-              horizontalScrollbarSize: 10
-            }
+            },
+            contextmenu: false,
+            readOnly: true, // Setting to true by default for mobile viewing, can be changed
           }}
         />
       </div>
