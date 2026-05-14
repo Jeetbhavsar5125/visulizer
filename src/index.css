@@ -214,25 +214,35 @@ h3 {
 
 /* Mobile Panels */
 @media (max-width: 768px) {
+
+  .app-content {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+  }
+
+  .visualizer-panel {
+    width: 100%;
+    order: 1;
+
+    min-height: 500px;
+    flex: none;
+  }
+
   .editor-panel {
     width: 100%;
     min-width: 100%;
 
     order: 2;
 
-    min-height: 450px;
-    height: 60vh;
+    flex: none;
 
-    margin-bottom: 20px;
-  }
+    min-height: 500px;
 
-  .visualizer-panel {
-    width: 100%;
+    overflow: visible;
 
-    order: 1;
-
-    min-height: 400px;
-    height: auto;
+    margin-bottom: 24px;
   }
 }
 

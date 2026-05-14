@@ -54,25 +54,20 @@ const CodeEditor = ({ code, setCode, language, setLanguage, theme }) => {
 
       {/* Editor Container */}
       <div
-        style={{
-          width: '100%',
-          height: '450px',
-          minHeight: '300px',
-          maxHeight: '80vh',
-          backgroundColor: 'var(--bg-panel)',
-          border: '1px solid var(--border-color)',
-          borderRadius: '12px',
-          overflow: 'hidden',
-          marginTop: '12px',
-
-          /* Mobile + Touch Fixes */
-          touchAction: 'pan-x pan-y',
-          WebkitOverflowScrolling: 'touch',
-
-          /* Prevent layout breaking */
-          position: 'relative',
-        }}
-      >
+  style={{
+    width: '100%',
+    height: '100%',
+    minHeight: '500px',
+    backgroundColor: 'var(--bg-panel)',
+    border: '1px solid var(--border-color)',
+    borderRadius: '12px',
+    overflow: 'hidden',
+    marginTop: '12px',
+    touchAction: 'pan-x pan-y',
+    WebkitOverflowScrolling: 'touch',
+    position: 'relative',
+  }}
+>
         <Editor
           height="100%"
           width="100%"
